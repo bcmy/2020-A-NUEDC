@@ -1,0 +1,102 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\e9e29cd2a9518cf785984639da063b36\appcompat-v7-23.4.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\cb1f032b0771b9d1e03133233a8ea1f3\constraint-layout-1.0.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\4b6bd403e9538df6078d24b42c2a5090\animated-vector-drawable-23.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\ab9ae26ba92a0f7a9b6353a2a8f99545\support-vector-drawable-23.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\57ffe8c62e3f3a2e6f1bc64a0470b760\support-v4-23.4.0\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:5:5-74
+	android:name
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:5:22-71
+uses-permission#android.permission.BLUETOOTH
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:6:22-65
+application
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:8:5-23:19
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\e9e29cd2a9518cf785984639da063b36\appcompat-v7-23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\e9e29cd2a9518cf785984639da063b36\appcompat-v7-23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\cb1f032b0771b9d1e03133233a8ea1f3\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\cb1f032b0771b9d1e03133233a8ea1f3\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\4b6bd403e9538df6078d24b42c2a5090\animated-vector-drawable-23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\4b6bd403e9538df6078d24b42c2a5090\animated-vector-drawable-23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\ab9ae26ba92a0f7a9b6353a2a8f99545\support-vector-drawable-23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\ab9ae26ba92a0f7a9b6353a2a8f99545\support-vector-drawable-23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\57ffe8c62e3f3a2e6f1bc64a0470b760\support-v4-23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\57ffe8c62e3f3a2e6f1bc64a0470b760\support-v4-23.4.0\AndroidManifest.xml:22:5-20
+	android:supportsRtl
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:11:9-41
+	android:icon
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:14:9-40
+activity#com.example.danyal.bluetoothhc05.DeviceList
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:15:19-45
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:19:27-74
+activity#com.example.danyal.bluetoothhc05.ledControl
+ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:22:9-57
+	android:name
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml:22:19-45
+uses-sdk
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\e9e29cd2a9518cf785984639da063b36\appcompat-v7-23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\e9e29cd2a9518cf785984639da063b36\appcompat-v7-23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\cb1f032b0771b9d1e03133233a8ea1f3\constraint-layout-1.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\cb1f032b0771b9d1e03133233a8ea1f3\constraint-layout-1.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\4b6bd403e9538df6078d24b42c2a5090\animated-vector-drawable-23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\4b6bd403e9538df6078d24b42c2a5090\animated-vector-drawable-23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\ab9ae26ba92a0f7a9b6353a2a8f99545\support-vector-drawable-23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\ab9ae26ba92a0f7a9b6353a2a8f99545\support-vector-drawable-23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\57ffe8c62e3f3a2e6f1bc64a0470b760\support-v4-23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\57ffe8c62e3f3a2e6f1bc64a0470b760\support-v4-23.4.0\AndroidManifest.xml:20:5-43
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fahaxiki\.gradle\caches\transforms-2\files-2.1\e9e29cd2a9518cf785984639da063b36\appcompat-v7-23.4.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\APK\apk\apk\MSP430_ECG_Android_APP-master\MSP430_ECG_Android_APP-master\app\src\main\AndroidManifest.xml
