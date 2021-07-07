@@ -1,0 +1,347 @@
+/*******************************************************************************
+* 文件名	: main.c
+* 作  者	: GGTEAM 
+* 版  本	: V1.0
+* 日  期	: 2020-10-07
+* 描  述	:
+*******************************************************************************/
+#include "sys.h"         //系统配置
+#include "delay.h"       //延时
+#include "usart.h"       //串口  		
+#include "led.h"
+#include "ADS1292.h"
+#include "Timer.h"
+#include "dma.h"
+#include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include "adc.h"
+
+void HMISendb(u8 k);
+
+s32 get_volt(u32 num);//把采到的3个字节补码转成有符号32位数
+u8 text_buffer[128];
+//main
+#define SEND_BUF_SIZE 8200	//发送数据长度,最好等于sizeof(TEXT_TO_SEND)+2的整数倍.
+
+u8 SendBuff[SEND_BUF_SIZE];	//发送数据缓冲区
+uchar_T Flag_Run=1;
+int main(void)
+{
+    u16 adcx;
+    u8 count=0;
+    s32 int_val;
+    float temp;
+    float tem;
+    u8 res,i,sum,j=0;
+    u8 data_to_send[60];//串口发送缓存
+    u8 usbstatus=0;
+    u32 cannle[2];	//存储两个通道的数据
+    s32	p_Temp[2];	//数据缓存
+   // float temperature[10];
+	u32 times_ECG,times_T;
+	u16 sum_T;
+
+
+    int32_t data_rdc_in;
+    int data_min = INT32_MAX;
+    int data_max = INT32_MIN;
+    int data_offset =  0;
+    u32 data_count = 0;
+    //  float data_send[20];//串口发送缓存
+
+
+//	delay_init();	    	 //延时函数初始化
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置中断优先级分组为组2：2位抢占优先级，2位响应优先级
+    //uart1_init(115200);	 	//串口初始化为115200
+    uart2_init(115200);
+
+	//LED_Init();			     //LED端口初始化
+
+    Adc_Init();
+
+
+
+    //DMA_Config(DMA1_Channel7,(u32)&USART2->DR,(u32)data_send);//串口1DMA设置
+    //USART_DMACmd(USART2,USART_DMAReq_Tx,ENABLE); //DMA
+//		data_to_send[0]=0xAA;
+//		data_to_send[1]=0xAA;
+//		data_to_send[2]=0xF1;
+//		data_to_send[3]=8;
+
+//初始化系统时钟	 72M
+    SystemInit();
+    delay_init();
+    delay_ms(100);
+    uart1_init(115200);//串口初始化为115200
+    DMA_Config(DMA1_Channel4,(u32)&USART1->DR,(u32)data_to_send);//串口1DMA设置
+    USART_DMACmd(USART1,USART_DMAReq_Tx,ENABLE); //DMA
+    LED_Init();
+
+    ADS1292_Init();	//初始化ads1292
+    while(Set_ADS1292_Collect(0))//0 正常采集  //1 1mV1Hz内部侧试信号 //2 内部短接噪声测试
+    {
+        printf("1292寄存器设置失败\r\n");
+        delay_s(1);
+        //	DS3 =!DS3;
+        //	DS4 =!DS4;
+    }
+    printf("寄存器设置成功\r\n");
+    delay_s(1);
+    //	DS3 =LEDOFF;
+//      DS4 =LEDOFF;
+
+    TIM2_Init(10000,7200);//系统指示
+    //TIM4_Init(2000,7200);//按键消抖
+
+
+    Subsystem_initialize();
+
+
+    EXTI->IMR |= EXTI_Line8;//开DRDY中断
+
+
+
+
+    while(1)//循环发送数据
+    {
+		
+		
+	//	for( times_ECG;times_ECG < 2500;times_ECG++){
+        if(	Flag_Run) {
+            if(ads1292_recive_flag)
+            {
+                //	cannle[0]=ads1292_Cache[3]<<16 | ads1292_Cache[4]<<8 | ads1292_Cache[5];//获取原始数据
+                cannle[1]=ads1292_Cache[6]<<16 | ads1292_Cache[7]<<8 | ads1292_Cache[8];
+
+                //p_Temp[0] = get_volt(cannle[0]);	//把采到的3个字节转成有符号32位数
+                p_Temp[1] = get_volt(cannle[1]);	//把采到的3个字节转成有符号32位数
+
+                //有符号数为再转为无符号，无符号数为逻辑右移
+                //	cannle[0] = p_Temp[0];
+                //      cannle[1]	= p_Temp[1];
+//							data_to_send[4]=cannle[0]>>24;		//25-32位
+//							data_to_send[5]=cannle[0]>>16;  	//17-24
+//							data_to_send[6]=cannle[0]>>8;		//9-16
+//							data_to_send[7]=cannle[0]; 			//1-8
+
+//							data_to_send[8]=cannle[1]>>24;		//25-32位
+//							data_to_send[9]=cannle[1]>>16;  	//17-24
+//							data_to_send[10]=cannle[1]>>8;		//9-16
+//							data_to_send[11]=cannle[1];			 //1-8
+//
+//							for(i=0;i<12;i++)
+//									sum += data_to_send[i];
+//							data_to_send[12] = sum;	//校验和
+                /*
+                memset(text_buffer,0,128);
+                sprintf((char *)text_buffer,"d:%d\n",(unsigned short)((double)cannle[1]/(double)1000));
+
+                memcpy(data_to_send,text_buffer,strlen(text_buffer));
+                DMA_Enable(DMA1_Channel4,strlen(text_buffer));//串口1DMA
+                */
+
+
+
+
+//            data_to_send[3]=cannle[1]>>24;		//25-32位
+//            data_to_send[2]=cannle[1]>>16;  	//17-24
+//            data_to_send[1]=cannle[1]>>8;		//9-16
+//            data_to_send[0]=cannle[1];			 //1-8
+//            data_to_send[4]='\n';
+
+                //          	cannle[1] = p_Temp[1];
+                rtU.In1	= p_Temp[1] >> 8;
+                Subsystem_step();
+
+                //	rtY.Out1
+
+
+                cannle[1]=(int32_t)rtY.Out1;
+                data_rdc_in = (int32_t)rtY.Out1;
+
+                data_count ++;
+                if(data_rdc_in > data_max) {
+                    data_max = data_rdc_in;
+                }
+                if(data_rdc_in < data_min) {
+                    data_min = data_rdc_in;
+                }
+
+                if(data_count > 1000) {
+                    data_offset =  data_min;
+                    data_min = INT32_MAX;
+                    data_max = INT32_MIN;
+                    data_count = 0;
+                }
+
+
+
+
+
+//			 count++;
+//			 if(count==250){
+//			 int_val=int_val/250;
+//			 }
+//			 int_val += rtY.Out1;
+//			 cannle[1]=rtY.Out1-int_val;
+//
+                // (int32_t)rtU.Out1
+//            data_to_send[3]=  cannle[1]>>24;		//25-32位
+//            data_to_send[2]=  cannle[1]>>16;  	//17-24
+//            data_to_send[1]=  cannle[1]>>8;		//9-16
+//            data_to_send[0]=  cannle[1];			 //1-8
+//            data_to_send[4]='\n';
+
+
+//							cannle[1]=rtY.Out1;
+//							cannle[1]=cannle[1]>>16;
+//							data_to_send[0]=0xA5;
+//		                    data_to_send[1]=0x5A;
+//		                    data_to_send[2]=0x06;
+//		                    data_to_send[3]=0x01;
+//							data_to_send[4]=cannle[1]/256;
+//		                    data_to_send[5]=cannle[1]%256;
+//		                    data_to_send[6]=data_to_send[2] + data_to_send[3] + data_to_send[4] + data_to_send[5];
+//		                    data_to_send[7]=0xAA;
+//
+
+
+
+
+                printf("add 1,0,%d",(data_rdc_in - data_offset) / 10);//((cannle[1]>>20)&0x00ff)*10);//0000 0000 0000 00000
+
+                HMISendb(0xFF);
+                //  printf("\r\nT:%.2f",temperature[0]);
+                //printf("test %d\n",123);
+
+                //  DMA_Enable(DMA1_Channel4,5);//串口1DMA
+                //delay_ms(15);
+                ads1292_recive_flag=0;
+                sum = 0;
+                j++;
+				
+				
+		
+			//}	
+				
+				
+				
+            //}
+		}
+//for( times_ECG;times_ECG < 2500;times_ECG++)
+           
+//	if(j%100==0){
+			    adcx=Get_Adc(ADC_Channel_1);
+                //count++;
+                temp=(float)adcx*(3.3/4096)*1000;
+                tem = ((-0.000000001809628)*temp*temp*temp+(-0.000003325395)*temp*temp+(-0.1814103)*temp+204.5894);
+			    sum_T += tem;
+				//count++;
+				
+				if(j==100){
+				sum_T=sum_T/100;
+				j=0
+				printf("t2.txt=\"%.2f\"",tem);
+
+
+                HMISendb(0xFF);
+				} 
+		//if( times_ECG == 250) {
+	//		for( times_T;times_T < 10;times_T++){
+//                adcx=Get_Adc(ADC_Channel_1);
+
+//                temp=(float)adcx*(3.3/4096)*1000;
+//                tem = ((-0.000000001809628)*temp*temp*temp+(-0.000003325395)*temp*temp+(-0.1814103)*temp+204.5894);
+//              //  temperature[0] = tem;
+//                j = 0;
+//				times_ECG=0;
+//				times_T=0;
+		//	}
+                //	data_to_send[0]=tem[0];			 //1-8
+                //	data_to_send[1]='\n';
+                //	DMA_Enable(DMA1_Channel7,2);
+				
+				//if(count==100) sum_T=sum_T/100;
+              //  times_ECG=0;
+			//	tem=temperature[0]
+                // printf("p.psd=%d\n,t1.txt=%.2f\n",cannle[1],temperature[0]);
+//                printf("t2.txt=\"%.2f\"",tem);
+
+
+//                HMISendb(0xFF);
+                //  u2_printf("\r\nT:%.2f℃",temperature[0]);
+
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+}
+
+
+/*功能：把采到的3个字节转成有符号32位数 */
+s32 get_volt(u32 num)
+{
+    s32 temp;
+    temp = num;
+    temp <<= 8;
+    temp >>= 8;
+    return temp;
+}
+
+
+
+
+/**********************************************************************
+编译结果里面的几个数据的意义：
+Code：表示程序所占用 FLASH 的大小（FLASH）
+RO-data：即 Read Only-data， 表示程序定义的常量，如 const 类型（FLASH）
+RW-data：即 Read Write-data， 表示已被初始化的全局变量（SRAM）
+ZI-data：即 Zero Init-data， 表示未被初始化的全局变量(SRAM)
+***********************************************************************/
+
+void HMISendb(u8 k)		         //字节发送函数
+{
+    u8 i;
+    for(i=0; i<3; i++)
+    {
+        printf("%c",k);
+    }
+}
+
+
+
+//void USART1_Handler(void)                	//串口1中断服务程序
+//{
+//    //USART_ClearFlag(USART1,USART_FLAG_TC);		//清发送完成标志位
+//    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
+//    {
+//        u8 temp;
+//        temp = USART_ReceiveData(USART1);
+//        if(('S'==temp)) {
+
+//            Flag_Run = 0;
+
+//        }
+
+//        if( ('R'==temp)) {
+
+//            Flag_Run = 1;
+
+//        }
+
+//    }
+
+//}
+
+//printf("\xff\xff\xff");
