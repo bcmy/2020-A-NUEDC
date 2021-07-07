@@ -1,0 +1,4 @@
+#Wed Mar 24 13:06:57 CST 2021
+base.0=D\:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
