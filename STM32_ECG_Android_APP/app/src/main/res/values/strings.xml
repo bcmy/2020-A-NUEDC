@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">基于STM32的无线运动节点设计</string>
+    <string name="pair">Pair</string>
+    <string name="_0">0</string>
+</resources>
