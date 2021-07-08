@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_device_list.xml.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\layout\\activity_device_list.xml"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_led_control.xml.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\layout\\activity_led_control.xml"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\APK\\apk\\apk\\MSP430_ECG_Android_APP-master\\MSP430_ECG_Android_APP-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    }
+]
